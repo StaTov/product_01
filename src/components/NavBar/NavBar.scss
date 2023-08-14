@@ -1,0 +1,46 @@
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: max-content;
+    padding: 5px 20px;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+}
+
+.nav__IconPerson_wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.nav__menu_person {
+    visibility: hidden;
+    position: absolute;
+
+    padding: 5px;
+    bottom: -300px;
+    right: 0px;
+    width: 200px;
+    height: 300px;
+    opacity: 0;
+    transition: padding 0.5s, visibility 0.5s, opacity 0.5s linear;
+}
+
+.nav__IconPerson_wrapper:hover .nav__menu_person {
+    opacity: 1;
+    padding: 0;
+    visibility: visible;
+}
+
+.nav__menu_person>div {
+    cursor: auto;
+    border-radius: 5px;
+    height: 100%;
+}

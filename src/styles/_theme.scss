@@ -1,0 +1,79 @@
+@import './colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.light {
+    .text {
+        color: $dark-900;
+    }
+
+    .bg {
+        background-color: $white-000;
+    }
+    .pop__bg {
+        background-color: $dark-300;
+    }
+
+    .nav__bg {
+        background-color: $dark-100;
+    }
+
+    .svg__moon {
+        color: $dark-300
+    }
+
+    .svg__sun {        
+        color:rgb(229, 255, 0)
+    }
+
+    .icon__person {
+        color:$dark-900
+    }
+
+    .border {
+        border-color: $dark-200 ;
+    }
+}
+
+
+
+.dark {
+    .text {
+        color: $dark-000
+        
+    }
+
+    .bg {
+        background-color: $dark-500;
+    }
+
+    .pop__bg {
+        background-color: $dark-300;
+    }
+    
+    .nav__bg {
+        background-color: $dark-700;
+    }
+
+    .svg__moon {
+        color: rgb(255, 221, 0)
+    }
+
+    .svg__sun {
+        color: $dark-000
+    }
+
+    .icon__person {
+        color:$dark-000;
+    }
+
+    .border {
+        border-color: $dark-200 ;
+    }
+}
+
