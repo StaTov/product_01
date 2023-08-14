@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { context } from "../..";
 import IconMoon from "../../assets/icon/IconMoon";
 import IconSun from "../../assets/icon/IconSun";
-import  './ButtonToggleTheme.scss'
+import  './NavButtonToggleTheme.scss'
 
 const ButtonToggleTheme = () => {
 

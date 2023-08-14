@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -12,11 +15,19 @@
         color: $dark-900;
     }
 
+    .text-sh {
+        color: $dark-500 
+    }
+
     .bg {
         background-color: $white-000;
     }
-    .pop__bg {
-        background-color: $dark-300;
+
+    .pop__person {
+        background: linear-gradient(to bottom,
+                $white-anrique 0% 30%,
+                $white-honeydew 30% 100%);
+
     }
 
     .nav__bg {
@@ -27,16 +38,21 @@
         color: $dark-300
     }
 
-    .svg__sun {        
-        color:rgb(229, 255, 0)
+    .svg__sun {
+        color: rgb(229, 255, 0)
     }
 
     .icon__person {
-        color:$dark-900
+        color: $dark-900
     }
 
     .border {
         border-color: $dark-200 ;
+    }
+
+    .btn {
+        color: $dark-900;
+        background-color: $white-honeydew;
     }
 }
 
@@ -44,18 +60,24 @@
 
 .dark {
     .text {
-        color: $dark-000
-        
+        color: $white-honeydew
+    }
+
+    .text-sh {
+        color: $dark-200 
     }
 
     .bg {
         background-color: $dark-500;
     }
 
-    .pop__bg {
-        background-color: $dark-300;
+    .pop__person {
+        background: linear-gradient(to bottom,
+                $dark-700 0% 30%,
+                $dark-600 30% 100%);
+        border-radius: 5px;
     }
-    
+
     .nav__bg {
         background-color: $dark-700;
     }
@@ -65,15 +87,19 @@
     }
 
     .svg__sun {
-        color: $dark-000
+        color: $white-honeydew
     }
 
     .icon__person {
-        color:$dark-000;
+        color: $white-honeydew;
     }
 
     .border {
         border-color: $dark-200 ;
     }
-}
 
+    .btn {
+        color: $dark-900;
+        background-color: $white-honeydew;
+    }
+}

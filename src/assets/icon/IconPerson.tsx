@@ -5,8 +5,8 @@ function IconPerson() {
     className="icon__person"
       fill="currentColor"
       viewBox="0 0 16 16"   
-      height="24px"
-      width="33px"      
+      height="100%"
+      width="100%"      
     >
       <path d="M11 6a3 3 0 11-6 0 3 3 0 016 0z" />
       <path
