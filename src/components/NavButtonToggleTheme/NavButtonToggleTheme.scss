@@ -1,3 +1,5 @@
+@import '../../styles/colors';
+
 .nav__btn_themeColor {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0);
@@ -5,18 +7,13 @@
     border: none;
 }
 
-.nav__btn_body {
+.nav__btn_themeColor_body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60px;
-    border: 1px solid rgba(255, 255, 255, 0.281);
-    border-radius: 15px;
+    width: 64px;
+    border: 1px solid ;
+    border-radius: 25px;
     padding: 3px 10px;
 }
 
-.nav__btn_divider {
-    padding: 0.1px;
-    background-color: rgb(70, 70, 70);
-    height: 18px;
-}

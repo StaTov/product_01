@@ -13,9 +13,8 @@ const ButtonToggleTheme = () => {
 
     return (
         <button className='nav__btn_themeColor' onClick={toggleTheme}>
-            <div className='nav__btn_body border'>
+            <div className='nav__btn_themeColor_body border'>
                 <IconMoon />
-                <div className='nav__btn_divider'></div>
                 <IconSun />
             </div>
         </button>

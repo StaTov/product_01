@@ -17,7 +17,7 @@ const App = () => {
       <div className='container bg'>
         <Routes>
           <Route path='/' element={<NavBar />} >
-            <Route path='/d' element={''} />
+            <Route path='/;' element={''} />
             <Route path='/f' element={''} />
             <Route path='/g' element={''} />
           </Route>
