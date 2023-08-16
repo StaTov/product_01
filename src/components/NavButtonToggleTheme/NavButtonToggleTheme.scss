@@ -10,10 +10,15 @@
 .nav__btn_themeColor_body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 64px;
-    border: 1px solid ;
-    border-radius: 25px;
-    padding: 3px 10px;
+    width: 27px;
+    height: 25px;
+    justify-content: center;   
 }
 
+.svg__moon {
+    color: #FF9933;
+}
+
+.svg__sun {
+    color: white;
+}

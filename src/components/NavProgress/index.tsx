@@ -4,7 +4,7 @@ import './Progress.scss'
 
 const NavProgress = () => {
 
-    const currentStep = 0;
+    const currentStep = 4;
 
     function stepCreator(d: string, i: number) {
 
@@ -23,6 +23,8 @@ const NavProgress = () => {
         }
 
         const roadStyle = (i < currentStep) ? statusColor : ''
+      
+
 
 
         return (
@@ -40,7 +42,7 @@ const NavProgress = () => {
     return (
 
         <div className='nav__progress_container'>
-            {stepDescription.map(stepCreator)}            
+            {stepDescription.map(stepCreator)}
         </div>
     )
 }

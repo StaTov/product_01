@@ -3,6 +3,7 @@ import { context } from "../..";
 import IconMoon from "../../assets/icon/IconMoon";
 import IconSun from "../../assets/icon/IconSun";
 import  './NavButtonToggleTheme.scss'
+import { observer } from "mobx-react";
 
 const ButtonToggleTheme = () => {
 
@@ -14,11 +15,10 @@ const ButtonToggleTheme = () => {
     return (
         <button className='nav__btn_themeColor' onClick={toggleTheme}>
             <div className='nav__btn_themeColor_body border'>
-                <IconMoon />
-                <IconSun />
+               {store.colorTheme !== 'light' ? <IconMoon /> :  <IconSun /> }        
             </div>
         </button>
     )
 }
 
-export default ButtonToggleTheme;
+export default observer(ButtonToggleTheme);

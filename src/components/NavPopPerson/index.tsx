@@ -46,11 +46,11 @@ const PopPerson = () => {
             <IconPerson />
             <div onClick={stopPropagation} className={`nav__menu_person ${visible}`}>
                 <div className='pop__person'>
-                    <div className='nav__pop__person_name text'>Stanislav</div>
+                    <div className='nav__pop__person_name'>Stanislav</div>
                     <div className='nav__pop__person_wrapper'>
                         <IconPerson />
                     </div>
-                    <div className='nav__pop__person_fullname text'>
+                    <div className='nav__pop__person_fullname'>
                         Stanislav Tovch
                     </div>
                     <div className='nav__pop__person_mail text-sh'>

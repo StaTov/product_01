@@ -16,8 +16,8 @@ const NavBar = () => {
     return (
         <div>
             <nav className='nav nav__bg'>
-                <div className="nav__left ">
-                    <div className="text">TEXT</div>
+                <div className='nav__left'>
+                    <div className='nav__title'>TEXT</div>
                 </div>
                 <div className='nav__right'>
                     <ButtonToggleTheme />

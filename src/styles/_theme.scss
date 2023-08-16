@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -16,7 +15,7 @@
     }
 
     .text-sh {
-        color: $dark-500 
+        color: $dark-500
     }
 
     .bg {
@@ -25,34 +24,29 @@
 
     .pop__person {
         background: linear-gradient(to bottom,
-                $white-anrique 0% 30%,
-                $white-honeydew 30% 100%);
-
+                #336699 0% 30%,
+                #6699CC 30% 100%);
     }
 
     .nav__bg {
-        background-color: $dark-100;
-    }
-
-    .svg__moon {
-        color: $dark-300
-    }
-
-    .svg__sun {
-        color: rgb(229, 255, 0)
+        background-color: #003366
     }
 
     .icon__person {
-        color: $dark-900
-    }
-
-    .border {
-        border-color: $dark-200 ;
+        color: white
     }
 
     .btn {
         color: $dark-900;
         background-color: $white-honeydew;
+    }
+
+    .p__panding {
+        border-color: #CC6633;
+    }
+
+    .p__success {
+        border-color: #339999;
     }
 }
 
@@ -64,7 +58,7 @@
     }
 
     .text-sh {
-        color: $dark-200 
+        color: rgb(137, 137, 137);
     }
 
     .bg {
@@ -82,24 +76,23 @@
         background-color: $dark-700;
     }
 
-    .svg__moon {
-        color: rgb(255, 221, 0)
-    }
-
-    .svg__sun {
-        color: $white-honeydew
-    }
 
     .icon__person {
         color: $white-honeydew;
-    }
-
-    .border {
-        border-color: $white-honeydew ;
     }
 
     .btn {
         color: $dark-900;
         background-color: $white-honeydew;
     }
+
+    .p__panding {
+        border-color: rgb(232, 115, 19);
+    }
+
+    .p__success {
+        border-color: rgb(19, 163, 48);
+    }
+
+
 }

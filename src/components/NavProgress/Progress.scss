@@ -21,6 +21,7 @@
 }
 
 .p__step {
+    min-height: 35px;
     font-size: 15px;
     font-weight: 600;
     margin-right: 10px;
@@ -40,20 +41,15 @@
     height: 5px;
     border: 5px solid rgb(181, 181, 181);
     border-radius: 50%;
-    outline: 3px solid $white-anrique
+    
 }
 
 .p__road {
     border: 1px solid rgb(181, 181, 181);
     margin: 4px;
     height: 100%;
+    
 }
 
-.p__success {
-    border-color: rgb(116, 170, 128);
-}
 
-.p__panding {
-    border-color: rgb(255, 156, 76);
-}
 
