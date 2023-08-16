@@ -57,7 +57,7 @@ const PopPerson = () => {
                         tovchfamily@gmail.com
                     </div>
                     <div>
-                        <button className='btn text'>выйти</button>
+                        <button className='p__btn'>выйти</button>
                     </div>
                 </div>
             </div>

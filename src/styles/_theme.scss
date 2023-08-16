@@ -19,7 +19,7 @@
     }
 
     .bg {
-        background-color: $white-000;
+        background-color: $white-floral;
     }
 
     .pop__person {
@@ -33,16 +33,16 @@
     }
 
     .icon__person {
-        color: white
+         color: $white-anrique;
     }
 
-    .btn {
+    .p__btn {
         color: $dark-900;
-        background-color: $white-honeydew;
+        background-color: $white-anrique;
     }
 
     .p__panding {
-        border-color: #CC6633;
+        border-color: #FF9966;
     }
 
     .p__success {
@@ -54,7 +54,7 @@
 
 .dark {
     .text {
-        color: $white-honeydew
+        color: $white-floral
     }
 
     .text-sh {
@@ -78,12 +78,12 @@
 
 
     .icon__person {
-        color: $white-honeydew;
+        color: $white-anrique;
     }
 
-    .btn {
+    .p__btn {
         color: $dark-900;
-        background-color: $white-honeydew;
+        background-color: $white-anrique;
     }
 
     .p__panding {
