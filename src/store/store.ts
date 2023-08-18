@@ -1,20 +1,26 @@
 import { makeAutoObservable } from 'mobx'
+import { User } from '../utils/types'
 
 export class Store {
     colorTheme = 'light'
-    visible = false
+    pop_visible = false
+    user: User | null = null//{ username: 'Stanislav', email: 'mail@gmail.com' }
 
     constructor() {
         makeAutoObservable(this)
     }
+    
+    setUser = (user: User | null) => {
+        this.user = user
+    }
 
     setVisible = (value: boolean | void) => {
-        if ( typeof value === 'boolean') {
-            this.visible = value
+        if (typeof value === 'boolean') {
+            this.pop_visible = value
             return
         }
-        this.visible = !this.visible
-        
+        this.pop_visible = !this.pop_visible
+
     }
 
     setColorTheme = () => {

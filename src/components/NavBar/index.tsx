@@ -1,31 +1,28 @@
 
-
-import { Outlet } from 'react-router-dom';
 import ButtonToggleTheme from '../NavButtonToggleTheme';
 import PopPerson from '../NavPopPerson';
-import NavProgress from '../NavProgress';
-import './NavBar.scss'
-
 import { observer } from 'mobx-react';
+import { useContext } from 'react';
+import { context } from '../..';
+import './NavBar.scss'
 
 
 
 const NavBar = () => {
-
+    const store = useContext(context)
 
     return (
         <div>
             <nav className='nav nav__bg'>
                 <div className='nav__left'>
-                    <div className='nav__title'>TEXT</div>
+                    <div className='nav__title'>LOGO-TYPE</div>
                 </div>
-                <div className='nav__right'>
-                    <ButtonToggleTheme />
-                    <PopPerson />
-                </div>
+                {store.user &&
+                    <div className='nav__right'>
+                        <ButtonToggleTheme />
+                        <PopPerson />
+                    </div>}
             </nav>
-            <NavProgress />
-            <Outlet />
         </div>
     )
 }

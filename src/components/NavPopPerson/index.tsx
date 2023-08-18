@@ -8,7 +8,7 @@ const PopPerson = () => {
 
 
     const store = useContext(context)
-    const visible = store.visible ? 'pop__visible' : ''
+    const visible = store.pop_visible ? 'pop__visible' : ''
     const root = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -22,13 +22,13 @@ const PopPerson = () => {
                 store.setVisible()
             }
         }
-        if (store.visible) {
+        if (store.pop_visible) {
             document.addEventListener("mousedown", handleClickOutside);
             return () => {
                 document.removeEventListener("mousedown", handleClickOutside);
             };
         }
-    }, [store.visible, store]);
+    }, [store.pop_visible, store]);
 
 
 
