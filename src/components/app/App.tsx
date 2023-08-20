@@ -4,8 +4,7 @@ import './App.scss';
 import { useContext} from 'react';
 import { context } from '../..';
 import Page from '../Page';
-import SignIn from '../Auth/SignIn';
-
+import Auth from '../Auth';
 
 const App = () => {
 
@@ -15,8 +14,8 @@ const App = () => {
       <div className='container bg'>
         <Routes>
           <Route path='/' element={<Page />} >
-            <Route path='/auth' element={<SignIn />} />
-            <Route path='/sign' element={''} />
+            <Route path='/auth' element={<Auth />} />
+            <Route path='/reg' element={''} />
             <Route path='/step3' element={''} />
           </Route>
         </Routes>

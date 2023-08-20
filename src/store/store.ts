@@ -9,11 +9,16 @@ export class Store {
     errMesageInputEmail = ''
     errMessageInputPassword = ''
     typePasswordVisible = true
+    signMenu: 'in' | 'up' = 'in'
     user: User | null = null//{ username: 'Stanislav', email: 'mail@gmail.com' }
 
 
     constructor() {
         makeAutoObservable(this)
+    }
+
+    toggleSignMenu = () => {
+        this.signMenu = this.signMenu === 'in' ? 'up' : 'in' 
     }
 
     setErrMesageInputEmail = (str: string): void => {

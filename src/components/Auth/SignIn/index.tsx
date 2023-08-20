@@ -8,9 +8,11 @@ import IconEye from '../../../assets/icon/IconEye';
 import IconEyeInvisible from '../../../assets/icon/IconEyeInvisible';
 
 
+
 const SignIn = () => {
 
     const store = useContext(context)
+
 
     // change style input
     const stylePassword = store.errMessageInputPassword ? 'input__invalid' : ''
@@ -61,6 +63,10 @@ const SignIn = () => {
         store.isVisibleUserPassword()
     }
 
+    const handleClickReg = () => {
+        store.toggleSignMenu()
+    }
+
     return (
         <div className='sign__container'>
             <div className='sign__body'>
@@ -83,7 +89,7 @@ const SignIn = () => {
                         </label>
                         <label htmlFor='input_pwd'>
                             <IconKey />
-                            <div className='icon__eye_box' onClick={handlePwdVisible}>
+                            <div className='icon__eye_box' title='показать/скрыть пароль' onClick={handlePwdVisible}>
                                 {store.typePasswordVisible
                                     ? <IconEye />
                                     : <IconEyeInvisible />}
@@ -105,7 +111,7 @@ const SignIn = () => {
                     </div>
                 </form>
                 <div className='sign__divider'></div>
-                <button className='sign__btn_reg'>Регистрация</button>
+                <button onClick={handleClickReg} className='sign__btn_reg'>Регистрация</button>
             </div>
         </div>
     )
