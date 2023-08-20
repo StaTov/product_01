@@ -14,12 +14,11 @@ const PopPerson = () => {
     useEffect(() => {
 
         function handleClickOutside(event: MouseEvent) {
-            if (
-                event.target instanceof Element
+            if (event.target instanceof Element
                 && root.current
-                && !root.current.contains(event.target)
-            ) {
-                store.setVisible()
+                && !root.current.contains(event.target)) {
+
+                store.setPopVisible()
             }
         }
         if (store.pop_visible) {
@@ -33,7 +32,7 @@ const PopPerson = () => {
 
 
     const handleVisible = (e: React.SyntheticEvent) => {
-        store.setVisible()
+        store.setPopVisible()
     }
 
     const stopPropagation = (e: React.SyntheticEvent) => {

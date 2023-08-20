@@ -1,10 +1,9 @@
 .sign__container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
 }
 
 .sign__body {
@@ -13,31 +12,47 @@
     align-items: center;
     min-height: 80%;
     border-radius: 10px;
-    background-color: #ffffff45;
-    border: 0.5px solid rgb(189, 189, 189);
-    padding: 35px 45px;
+    background-color: #ffffffac;
+    border: 1px solid rgba(189, 189, 189, 0.672);
+    padding: 35px 45px 10px 45px;
 }
 
-.sign__input_wrapper {
+.sign__box {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: max-content;
+    gap: 20px
+}
+
+.sign__box>label {
     position: relative;
 }
+
+.sign__box>label>p {
+    padding: 5px 0 0 10px;
+    color: rgb(255, 0, 0);
+    font-size: 10px;
+    font-weight: 400;
+}
+
 
 .sign__title {
     font-size: 20px;
     color: #18416C;
-    padding: 10px 0px 30px 0px;
+    padding: 10px 0px 10px 0px;
 }
 
 
 .sign__input {
-    padding: 8px 12px;
-    padding-left: 40px;
-    margin-bottom: 20px;
+    padding: 8px 40px;
+    
     color: #002242;
     font-weight: 400;
     min-width: 250px;
     border: 1px solid rgb(201, 201, 201);
     border-radius: 7px;
+   
 }
 
 
@@ -48,13 +63,15 @@
 
 .sign__input::placeholder {
     font-weight: 400;
-    color: #49627C;
+    color: #9f9f9f;
     opacity: 1;
 }
 
-.sign__input:invalid {
-    // border: 1px solid red;
+
+.input__invalid {
+    border: 1px solid rgb(255, 89, 89);  
 }
+
 
 .icon_email,
 .icon_key {
@@ -64,10 +81,15 @@
     color: hsl(20, 100%, 59%);
 }
 
-.sign__form {
-    display: flex;
-    flex-direction: column;
-    height: 150px;
+.icon__eye_box {
+    cursor: pointer;
+    position: absolute;   
+    top: 9px;
+    right: 12px;
+}
+
+.icon__eye {
+    color: #18416C;
 }
 
 .sign__btn {
@@ -76,25 +98,24 @@
     color: white;
     border: none;
     border-radius: 7px;
-    background-color: #18416C;
+    background: radial-gradient(#1f5287 10%, #18416C)
 }
 
 .sign__btn_reg {
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 20px;
     width: 100%;
     padding: 9px 15px;
     color: white;
     border: none;
     border-radius: 7px;
-    background-color: hsl(20, 100%, 59%);
+    background: radial-gradient(hsl(20, 100%, 63%) 10%, hsl(20, 100%, 59%))
 }
 
 
- .sign__divider  {
-    padding: 0.4px;
+.sign__divider {
+    padding: 0.6px;
     background-color: #dfdfdf;
     width: 100%;
-    margin: 15px 5px;
-}
 
+}

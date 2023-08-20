@@ -10,6 +10,7 @@ import './NavBar.scss'
 
 const NavBar = () => {
     const store = useContext(context)
+    
 
     return (
         <div>

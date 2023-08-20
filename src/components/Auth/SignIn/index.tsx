@@ -1,41 +1,108 @@
+import { useContext } from 'react';
 import IconEmailOutline from '../../../assets/icon/IconEmail'
 import IconKey from '../../../assets/icon/IconKey'
 import './SignIn.scss'
+import { observer } from 'mobx-react'
+import { context } from '../../..';
+import IconEye from '../../../assets/icon/IconEye';
+import IconEyeInvisible from '../../../assets/icon/IconEyeInvisible';
+
 
 const SignIn = () => {
+
+    const store = useContext(context)
+
+    // change style input
+    const stylePassword = store.errMessageInputPassword ? 'input__invalid' : ''
+    const styleEmail = store.errMesageInputEmail ? 'input__invalid' : ''
+
+    //submit
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+
+        //chek email and pass are valid
+        if (!store.userInputPassword) {
+            store.setErrMessageInputPassword('* поле обязательно для заполнения')
+        }
+        if (!store.userInputEmail) {
+            store.setErrMesageInputEmail('* поле обязательно для заполнения')
+        }
+
+        if (!store.userInputEmail.includes('@')) {
+            store.setErrMesageInputEmail('* введите действующий email')
+        }
+
+        // if no error-message do submit
+
+        if (!store.errMesageInputEmail && !store.errMessageInputPassword) {
+            console.log('data', {
+                email: store.userInputEmail,
+                password: store.userInputPassword
+            })
+        }
+        return
+    }
+
+    const handleFocusEmail = () => {
+        store.setErrMesageInputEmail('')
+    }
+    const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        store.setUserInputEmail(e.target.value)
+    }
+
+    const handleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+        store.setUserInputPassword(e.target.value)
+    }
+    const handleFocusPassword = () => {
+        store.setErrMessageInputPassword('')
+    }
+    const handlePwdVisible = (e: React.SyntheticEvent) => {
+        e.preventDefault()
+        store.isVisibleUserPassword()
+    }
+
     return (
         <div className='sign__container'>
             <div className='sign__body'>
                 <div className='sign__title' >
                     Войти в LOGO-TYPE
                 </div>
-                <form className='sign__form'>
-                    <label htmlFor='input_email'>
-                        <div className='sign__input_wrapper'>
+                <form onSubmit={handleSubmit}>
+                    <div className='sign__box'>
+                        <label htmlFor='input_email'>
                             <IconEmailOutline />
                             <input
-                                className='sign__input'
-                                id='input_email'
-                                type='text'
+                                onFocus={handleFocusEmail}
+                                onChange={handleChangeEmail}
+                                value={store.userInputEmail}
+                                className={`sign__input ${styleEmail}`}
                                 placeholder='email'
-
                             />
-                        </div>
-                        <p></p>
-                    </label>
-                    <label htmlFor='input_pwd'>
-                        <div className='sign__input_wrapper'>
+                            {store.errMesageInputEmail
+                                && <p>{store.errMesageInputEmail}</p>}
+                        </label>
+                        <label htmlFor='input_pwd'>
                             <IconKey />
+                            <div className='icon__eye_box' onClick={handlePwdVisible}>
+                                {store.typePasswordVisible
+                                    ? <IconEye />
+                                    : <IconEyeInvisible />}
+                            </div>
                             <input
-                                className='sign__input'
+                                onFocus={handleFocusPassword}
+                                onChange={handleChangePassword}
+                                value={store.userInputPassword}
+                                name='password'
+                                className={`sign__input ${stylePassword}`}
                                 id='input_pwd'
-                                type='password'
+                                type={store.typePasswordVisible ? 'password' : 'text'}
                                 placeholder='password'
                             />
-                        </div>
-                        <p></p>
-                    </label>
-                    <button className='sign__btn' type='submit'>Войти</button>
+                            {store.errMessageInputPassword
+                                && <p>{store.errMessageInputPassword}</p>}
+                        </label>
+                        <button className='sign__btn' type='submit'>Войти</button>
+                    </div>
                 </form>
                 <div className='sign__divider'></div>
                 <button className='sign__btn_reg'>Регистрация</button>
@@ -44,4 +111,5 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default observer(SignIn)
+
