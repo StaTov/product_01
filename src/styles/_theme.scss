@@ -9,6 +9,63 @@
 }
 
 
+.form__input {
+    padding: 8px 40px;
+    font-weight: 400;
+    min-width: 250px;
+    border-radius: 7px;
+
+}
+
+.form__input:focus {
+    outline: none;
+    border: 1px solid #00245b7e;
+}
+
+.form__input::placeholder {
+    font-weight: 400;
+}
+
+.form__input_error {
+    padding: 5px 0 0 10px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+button {
+    opacity: 1;
+    transition: opacity 0.2s;
+
+    &:active {
+        opacity: 0.7;
+
+    }
+}
+
+.form__btn_blue {
+    cursor: pointer;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 7px;
+    background: radial-gradient(#1f5287 10%, #18416C);
+
+
+}
+
+.form__btn_orange {
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 7px;
+    background: radial-gradient(hsl(20, 100%, 68%) 5%, hsl(20, 100%, 59%))
+}
+
+
+
+////////////////LIGHT///////////////
+
 .light {
     .text {
         color: black;
@@ -33,7 +90,7 @@
     }
 
     .icon__person {
-         color: $white-anrique;
+        color: $white-anrique;
     }
 
     .p__btn {
@@ -48,9 +105,57 @@
     .p__success {
         border-color: #339999;
     }
+
+    .sign__body {
+        background-color: #ffffffac;
+        border: 1px solid rgba(189, 189, 189, 0.513);
+    }
+
+    .sign__title {
+        color: #18416C;
+    }
+
+    .form__input {
+        color: #002242;
+        border: 1px solid rgb(201, 201, 201);
+    }
+
+    .form__input::placeholder {
+        color: rgb(68, 68, 68)
+    }
+
+    .form__input:focus {
+        outline: none;
+        border: 1px solid #00245b7e;
+    }
+
+    .form__input_error {
+        color: rgb(255, 0, 0);
+    }
+
+    .input__invalid {
+        border: 1px solid rgb(255, 89, 89);
+    }
+
+    .form__btn_blue {
+        color: white;
+    }
+
+    .form__btn_orange {
+        color: white;
+    }
+
+    .sign__divider {
+        background-color: #dfdfdf;
+    }
+
+    .icon__eye {
+        color: #18416C;
+    }
 }
 
 
+/////////////DARK///////////
 
 .dark {
     .text {
@@ -94,5 +199,52 @@
         border-color: rgb(19, 163, 48);
     }
 
+    .sign__body {
+        background-color: $dark-700;
+        border: 1px solid rgba(63, 63, 63, 0.672);
+    }
+
+    .sign__title {
+        color: $white-anrique;
+    }
+
+    .form__input {
+        color: $white-anrique;
+        background-color: rgb(54, 54, 54);
+        border: 1px solid rgb(63, 63, 63);
+    }
+
+    .form__input::placeholder {
+        color: rgb(210, 210, 210)
+    }
+
+    .form__input:focus {
+        outline: none;
+        border: 1px solid rgba(218, 218, 218, 0.769);
+    }
+
+    .form__input_error {
+        color: rgb(255, 90, 90);
+    }
+
+    .input__invalid {
+        border: 1px solid rgb(255, 169, 169);
+    }
+
+    .form__btn_blue {
+        color: $white-anrique;
+    }
+
+    .form__btn_orange {
+        color: $white-anrique;
+    }
+
+    .sign__divider {
+        background-color: #616161;
+    }
+
+    .icon__eye {
+        color: rgb(163, 163, 163)
+    }
 
 }

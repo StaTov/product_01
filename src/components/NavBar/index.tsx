@@ -10,7 +10,7 @@ import './NavBar.scss'
 
 const NavBar = () => {
     const store = useContext(context)
-    
+
 
     return (
         <div>
@@ -18,11 +18,10 @@ const NavBar = () => {
                 <div className='nav__left'>
                     <div className='nav__title'>LOGO-TYPE</div>
                 </div>
-                {store.user &&
-                    <div className='nav__right'>
-                        <ButtonToggleTheme />
-                        <PopPerson />
-                    </div>}
+                <div className='nav__right'>
+                    <ButtonToggleTheme />
+                    {store.user && <PopPerson />}
+                </div>
             </nav>
         </div>
     )

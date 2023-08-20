@@ -68,7 +68,7 @@ const SignIn = () => {
     }
 
     return (
-        <div className='sign__container'>
+        <div className='sign__container bg'>
             <div className='sign__body'>
                 <div className='sign__title' >
                     Войти в LOGO-TYPE
@@ -81,11 +81,11 @@ const SignIn = () => {
                                 onFocus={handleFocusEmail}
                                 onChange={handleChangeEmail}
                                 value={store.userInputEmail}
-                                className={`sign__input ${styleEmail}`}
+                                className={`form__input ${styleEmail}`}
                                 placeholder='email'
                             />
                             {store.errMesageInputEmail
-                                && <p>{store.errMesageInputEmail}</p>}
+                                && <p className='form__input_error'>{store.errMesageInputEmail}</p>}
                         </label>
                         <label htmlFor='input_pwd'>
                             <IconKey />
@@ -99,19 +99,19 @@ const SignIn = () => {
                                 onChange={handleChangePassword}
                                 value={store.userInputPassword}
                                 name='password'
-                                className={`sign__input ${stylePassword}`}
+                                className={`form__input ${stylePassword}`}
                                 id='input_pwd'
                                 type={store.typePasswordVisible ? 'password' : 'text'}
                                 placeholder='password'
                             />
                             {store.errMessageInputPassword
-                                && <p>{store.errMessageInputPassword}</p>}
+                                && <p className='form__input_error'>{store.errMessageInputPassword}</p>}
                         </label>
-                        <button className='sign__btn' type='submit'>Войти</button>
+                        <button className='form__btn_blue' type='submit'>Войти</button>
                     </div>
                 </form>
                 <div className='sign__divider'></div>
-                <button onClick={handleClickReg} className='sign__btn_reg'>Регистрация</button>
+                <button onClick={handleClickReg} className='form__btn_orange'>Регистрация</button>
             </div>
         </div>
     )

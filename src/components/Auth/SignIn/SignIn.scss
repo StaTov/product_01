@@ -1,3 +1,5 @@
+@import '../../../styles/colors';
+
 .sign__container {
     display: flex;
     justify-content: center;
@@ -12,8 +14,6 @@
     align-items: center;
     min-height: 80%;
     border-radius: 10px;
-    background-color: #ffffffac;
-    border: 1px solid rgba(189, 189, 189, 0.672);
     padding: 35px 45px 10px 45px;
 }
 
@@ -29,47 +29,10 @@
     position: relative;
 }
 
-.sign__box>label>p {
-    padding: 5px 0 0 10px;
-    color: rgb(255, 0, 0);
-    font-size: 10px;
-    font-weight: 400;
-}
-
 
 .sign__title {
     font-size: 20px;
-    color: #18416C;
     padding: 10px 0px 10px 0px;
-}
-
-
-.sign__input {
-    padding: 8px 40px;
-    
-    color: #002242;
-    font-weight: 400;
-    min-width: 250px;
-    border: 1px solid rgb(201, 201, 201);
-    border-radius: 7px;
-   
-}
-
-
-.sign__input:focus {
-    outline: none;
-    border: 1px solid #00245b7e;
-}
-
-.sign__input::placeholder {
-    font-weight: 400;
-    color: #9f9f9f;
-    opacity: 1;
-}
-
-
-.input__invalid {
-    border: 1px solid rgb(255, 89, 89);  
 }
 
 
@@ -83,39 +46,13 @@
 
 .icon__eye_box {
     cursor: pointer;
-    position: absolute;   
+    position: absolute;
     top: 9px;
     right: 12px;
 }
 
-.icon__eye {
-    color: #18416C;
-}
-
-.sign__btn {
-    cursor: pointer;
-    padding: 9px 15px;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    background: radial-gradient(#1f5287 10%, #18416C)
-}
-
-.sign__btn_reg {
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
-    padding: 9px 15px;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    background: radial-gradient(hsl(20, 100%, 63%) 10%, hsl(20, 100%, 59%))
-}
-
 
 .sign__divider {
-    padding: 0.6px;
-    background-color: #dfdfdf;
+    padding: 0.5px;
     width: 100%;
-
 }
